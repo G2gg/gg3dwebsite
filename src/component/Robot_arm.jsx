@@ -12,7 +12,7 @@ import { useFrame } from '@react-three/fiber';
 
 const Robot_arm = (props) =>  {
     const groupRef = useRef(); 
-    const { nodes, materials } = useGLTF('/models/robotic_manipulator.glb'); 
+    const { nodes, materials } = useGLTF('models/robotic_manipulator.glb'); 
     
     useFrame(() => { 
         if (groupRef.current) { 
@@ -286,6 +286,6 @@ const Robot_arm = (props) =>  {
   )
 }
 
-useGLTF.preload('/models/robotic_manipulator.glb')
+useGLTF.preload('models/robotic_manipulator.glb')
 
 export default Robot_arm;
