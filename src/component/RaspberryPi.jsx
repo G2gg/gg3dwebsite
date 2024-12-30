@@ -4,7 +4,7 @@ import { useThree } from '@react-three/fiber';
 
 const RaspberryPi = (props) => {
   const groupRef = useRef();
-  const { nodes, materials } = useGLTF('/models/raspberry.glb');
+  const { nodes, materials } = useGLTF('models/raspberry.glb');
   
   const [isDragging, setIsDragging] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -98,6 +98,6 @@ const RaspberryPi = (props) => {
   );
 };
 
-useGLTF.preload('/models/raspberry.glb');
+useGLTF.preload('models/raspberry.glb');
 
 export default RaspberryPi;
