@@ -14,7 +14,7 @@ const projectCount = myProjects.length;
 const Projects = () => {
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
-    const [isMuted, setIsMuted] = useState(false);
+    const [isMuted, setIsMuted] = useState(true);
     const audioRef = useRef(new Audio(myProjects[0].texture));
     
 
