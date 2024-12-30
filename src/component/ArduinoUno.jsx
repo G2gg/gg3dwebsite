@@ -4,7 +4,7 @@ import { useFrame } from '@react-three/fiber';
 
 const Arduino = (props) => {
   const groupRef = useRef();
-  const { nodes, materials } = useGLTF('/models/arduinoUno.glb');
+  const { nodes, materials } = useGLTF('models/arduinoUno.glb');
   
   // State for hover and click interactions
   const [isDragging, setIsDragging] = useState(false);
@@ -116,6 +116,6 @@ const Arduino = (props) => {
   );
 };
 
-useGLTF.preload('/models/arduinoUno.glb');
+useGLTF.preload('models/arduinoUno.glb');
 
 export default Arduino;
