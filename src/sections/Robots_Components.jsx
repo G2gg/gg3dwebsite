@@ -24,12 +24,12 @@ const Robots_Components = () => {
                         <div className="w-full sm:h-[266px] h-fit">
                             <Canvas className="w-full h-full">
                                 <Suspense fallback={<CanvasLoader />}>
-                                    <PerspectiveCamera makeDefault position={[0, 0, 20]} />
+                                    <PerspectiveCamera makeDefault position={[0, 0, 25]} />
                                     <group>
                                         <RaspberryPi 
-                                            scale={0.115}
+                                            scale={0.13}
                                             rotation={[0, 0, 1]} 
-                                            position={[0, 1.5, 0]}
+                                            position={[0, 1, 0]}
                                         />
                                     </group>
                                     <ambientLight intensity={2} />
@@ -51,7 +51,7 @@ const Robots_Components = () => {
                                     <PerspectiveCamera makeDefault position={[0, 0, 20]} />
                                     <group>
                                         <ArduinoUno 
-                                            scale={0.115}
+                                            scale={0.111}
                                             rotation={[0, 0.5, 1]}
                                             position={[0, -1, 0]} 
                                         />

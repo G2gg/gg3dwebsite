@@ -6,6 +6,7 @@ import Projects from './sections/Projects'
 import Contact from './sections/Contact'
 import Experience from './sections/Experience'
 import Robots_Components from './sections/Robots_Components'
+import Social from './sections/Social'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Robots_Components />
       <Projects />
       <Experience />
+      <Social />
       <Contact />
     </main>
   )

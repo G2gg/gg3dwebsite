@@ -61,6 +61,16 @@ const Breadboard = (props) => {
       window.removeEventListener('pointermove', handlePointerMove);
     };
   }, [isDragging]);
+  
+  const handlePointerOver = (event) => {
+    event.stopPropagation();
+    document.body.style.cursor = 'pointer';
+  };
+
+  const handlePointerOut = (event) => {
+    event.stopPropagation();
+    document.body.style.cursor = 'default';
+  };
 
   return (
     <group 
@@ -69,6 +79,8 @@ const Breadboard = (props) => {
       ref={groupRef} 
       onPointerDown={handlePointerDown}
       onPointerUp={handlePointerUp}
+      onPointerOver={handlePointerOver}
+      onPointerOut={handlePointerOut}
     >
 
       <group rotation={[-Math.PI / 2, 0, 0]}>
