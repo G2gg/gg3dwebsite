@@ -5,6 +5,7 @@ import About from './sections/About'
 import Projects from './sections/Projects'
 import Contact from './sections/Contact'
 import Experience from './sections/Experience'
+import Robots_Components from './sections/Robots_Components'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
+      <Robots_Components />
       <Projects />
       <Experience />
       <Contact />

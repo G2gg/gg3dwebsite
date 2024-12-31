@@ -264,7 +264,7 @@ export const navLinks = [
         desc: 'Finally applied SLAM to my real hardware robot',
         subdesc:
           'This robot uses odometry feedback from the encoder DC geared motors and a RP LiDAR A1M8 sensor for mapping. For the project I have used Raspberry Pi 4, Arduino Nano, LiPo batteries, L298N motor driver, RP LiDAR, and encoder motors.',
-        href: 'https://www.linkedin.com/posts/gunesh-gupta_ros2-ros-robotic-activity-7224655892263133184-p_Bf?utm_source=share&utm_medium=member_desktop',
+        href: 'https://www.linkedin.com/posts/gunesh-gupta_ros2-ros-robotics-activity-7248612826477461504-QQ9j?utm_source=share&utm_medium=member_desktop',
         texture: 'textures/project/project7.mp4',
         logo: 'assets/ros2humble.png',
         logoStyle: {

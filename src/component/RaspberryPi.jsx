@@ -91,7 +91,7 @@ const RaspberryPi = (props) => {
           receiveShadow
           geometry={nodes.Object_3.geometry}
           material={materials.rpi_L}
-          position={[-66.955, -48.678, -43.703]}
+          position={[-66.955, -49.678, -43.703]}
         />
       </group>
     </group>

@@ -1,11 +1,11 @@
-import { PerspectiveCamera } from '@react-three/drei';
+import { PerspectiveCamera, OrbitControls } from '@react-three/drei';
 import React, { Suspense, useState } from 'react';
 import CanvasLoader from '../component/CanvasLoader'; // Make sure the path is correct
 import { Canvas } from '@react-three/fiber';
 import Globe from 'react-globe.gl';
-
 import Button from '../component/Button'; // Make sure the path is correct
 import Robot_arm from '../component/Robot_arm'; // Make sure the path is correct
+import Breadboard from '../component/Breadboard';
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -36,13 +36,27 @@ const About = () => {
 
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/Mygrid.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain" />
+            <div className='canvas-container' >
+              <Canvas className="w-full h-full">
+                  <Suspense fallback={<CanvasLoader />}>
+                    <PerspectiveCamera makeDefault position={[0, 0, 20]} />
+                    <group>
+                      <Robot_arm 
+                        position={[0, -8, 0]}
+                        scale={1.4}
+                      />
+                    </group>
+                    <ambientLight intensity={2} />
+                    <directionalLight position={[10, 10, 10]} intensity={0.5} />
+                  </Suspense>
+                </Canvas>
+            </div>
             <div>
-              <p className="grid-headtext">Tech Stack</p>
+              <p className="grid-headtext">My Passion for Robotics</p>
               <p className="grid-subtext">
-                Proficient in coding for microcontrollers such as Arduino and ESP32. 
-                I have built robots using SLAM (Simultaneous Localization and Mapping) with ROS2 Humble and Gazebo.
-                My projects also show hands-on simulation experience with manipulator robots.
+                I love learning about the mechanical aspects of robotics and then programming them from the basics.
+                Programming for robots isn&apos;t just my profession—it&apos;s my passion.
+                I enjoy exploring new technologies and enhancing my skills.
               </p>
             </div>
           </div>
@@ -72,28 +86,33 @@ const About = () => {
         </div>
 
         <div className="xl:col-span-2 xl:row-span-3">
-          <div className="grid-container">
-            <div className="w-full sm:h-[266px] h-fit">
-              <Canvas className="w-full h-full">
-                <Suspense fallback={<CanvasLoader />}>
-                  <PerspectiveCamera makeDefault position={[0, 0, 20]} />
-                  <group>
-                    <Robot_arm 
-                      position={[0, -4, 0]}
-                    />
-                  </group>
-                  <ambientLight intensity={2} />
-                  <directionalLight position={[10, 10, 10]} intensity={0.5} />
-                </Suspense>
-              </Canvas>
-            </div>
-            <div>
-              <p className="grid-headtext">My Passion for Robotics</p>
-              <p className="grid-subtext">
-                I love learning about the mechanical aspects of robotics and then programming them from the basics.
-                Programming for robots isn&apos;t just my profession—it&apos;s my passion.
-                I enjoy exploring new technologies and enhancing my skills.
-              </p>
+          <div className="xl:col-span-2 xl:row-span-3 h-full">
+            <div className="grid-container h-full flex flex-col justify-between">
+              <div className="w-full sm:h-[266px] h-full">
+                <Canvas className="w-full h-full">
+                  <Suspense fallback={<CanvasLoader />}>
+                    <PerspectiveCamera makeDefault position={[0, 0, 20]} />
+                    <group>
+                      <Breadboard 
+                        position={[0, 0, 0]}
+                        rotation={[1.3, 0, 0]}
+                        scale={0.5}
+                      />
+                    </group>
+                    <ambientLight intensity={2} />
+                    <directionalLight position={[10, 10, 10]} intensity={0.5} />
+                  </Suspense>
+                  <OrbitControls enableZoom={true} />
+                </Canvas>
+              </div>
+              <div className="mt-auto">
+                <p className="grid-headtext">Tech Stack</p>
+                <p className="grid-subtext">
+                  Proficient in coding for microcontrollers such as Arduino and ESP32. 
+                  I have built robots using SLAM (Simultaneous Localization and Mapping) with ROS2 Humble and Gazebo.
+                  My projects also show hands-on simulation experience with manipulator robots.
+                </p>
+              </div>
             </div>
           </div>
         </div>
