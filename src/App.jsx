@@ -7,6 +7,7 @@ import Contact from './sections/Contact'
 import Experience from './sections/Experience'
 import Robots_Components from './sections/Robots_Components'
 import Social from './sections/Social'
+import Book_UI from './sections/Book_UI'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <About />
       <Robots_Components />
       <Projects />
+      <Book_UI />
       <Experience />
       <Social />
       <Contact />
