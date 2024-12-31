@@ -12,8 +12,8 @@ import { degToRad } from "three/src/math/MathUtils.js";
 
 // Constants and configurations
 const pictures = [
-  "page1", "page2", "blank", "blank", "blank",
-  "blank", "blank", "blank", "blank", "blank",
+  "page1", "page2", "page3", "page4", "page5",
+  "page6", "blank", "blank", "blank", "blank",
   "blank", "blank", "blank", "blank", "blank",
   "blank"
 ];
