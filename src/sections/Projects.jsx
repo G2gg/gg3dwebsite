@@ -16,6 +16,7 @@ const Projects = () => {
 
     const [isMuted, setIsMuted] = useState(true);
     const audioRef = useRef(new Audio(myProjects[0].texture));
+    audioRef.current.loop = true
     
 
   useEffect(() => { 
